@@ -1,3 +1,15 @@
+> **Fork notice.** This is an independently-maintained fork of the original
+> [ReAct](https://github.com/ysymyth/ReAct) repository by Shunyu Yao et al.
+> (ICLR 2023). The original notebooks targeted OpenAI's deprecated
+> `text-davinci-002` completions API; this fork updates the `llm()` helper to the
+> current OpenAI Python SDK (v1) and `gpt-4o-mini` so the code runs today. Every
+> changed line is marked with a `# ! -` comment — everything else is unchanged.
+> Original work © 2023 Shunyu Yao, MIT License (retained in [LICENSE](LICENSE));
+> please cite the paper (citation at the bottom of this README).
+> _Not affiliated with or endorsed by the original authors._
+
+---
+
 # ReAct Prompting
 
 GPT-3 prompting code for ICLR 2023 paper [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629).
