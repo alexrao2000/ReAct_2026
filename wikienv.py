@@ -8,7 +8,10 @@ from bs4 import BeautifulSoup
 # import wikipedia
 
 def clean_str(p):
-  return p.encode().decode("unicode-escape").encode("latin1").decode("utf-8")
+  try:
+    return p.encode().decode("unicode-escape").encode("latin1").decode("utf-8")
+  except (UnicodeDecodeError, UnicodeEncodeError):  # ! - some real page text has backslash sequences that break the unicode-escape round-trip; keep it raw instead of crashing
+    return p
 
 
 class textSpace(gym.spaces.Space):
